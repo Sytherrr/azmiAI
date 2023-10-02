@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Login</title>
+    <!-- Add any CSS or styling links here if needed -->
+</head>
+<body>
+    <h1>User Login</h1>
+
+    <!-- Display the login form -->
+    <form method="post">
+        {% csrf_token %}
+
+        <!-- User Credentials -->
+        <h2>User Credentials</h2>
+        <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.password.id_for_label }}">Password:</label>
+            {{ form.password }}
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Add any additional instructions or information here -->
+</body>
+</html>

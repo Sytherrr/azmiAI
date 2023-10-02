@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Analysis Result</title>
+</head>
+<body>
+    <h1>Analysis Result</h1>
+    <ul>
+        <li>Student Name: {{ analysis_result.student.name }}</li>
+        <li>GPA: {{ analysis_result.student.gpa }}</li>
+        <li>Attendance {{ analysis_result.student.attendance }}</li>
+        <li>Analysis Model: {{ analysis_result.model_name }}</li>
+        <li>Predicted Score: {{ analysis_result.prediction }}</li>
+    </ul>
+
+    <a href="{ % url 'input_form % }">Back to Input</a>
+    <a href="{% url 'analyze_student' student_id %}">Analyze</a>
+
+
+
+</body>
+</html>

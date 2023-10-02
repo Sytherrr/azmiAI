@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+
+    {% if analysis_result %}
+    <h2>Student Performance:</h2>
+    <ul>
+        <li>Model: {{  analysis_results.model_name }}</li>
+        <li>GPA: {{  analysis_results.gpa }}</li>
+        <li>Attendance: {{  analysis_results.attendance }}</li>
+        <li>Prediction: {{  analysis_results.prediction }}</li>
+    </ul>
+
+    {{ chart_div|safe }}
+
+    <a href="{% url 'input_form' %}">Back to Input</a>
+    {% else %}
+
+
+    {% endif %}
+
+    <!-- You can add more sections and formatting as needed to display analysis results -->
+</body>
+</html>
