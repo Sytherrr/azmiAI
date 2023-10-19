@@ -9,7 +9,6 @@ import plotly.graph_objs as go
 # User_Authentication
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
-from django.shortcuts import render, redirect
 
 @login_required
 def input_form_view(request):
@@ -70,7 +69,7 @@ def results_view(request):
     analysis_results = {
         'model_name': 'Linear Regression',
         'gpa': 3.5,
-        'attendance': 'Often',
+        'attendance': 'Always',
         'prediction': 85,
     }
 
